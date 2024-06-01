@@ -1,4 +1,4 @@
-# AnalyzStockMarketTrend-Power-BI-
+# Analysis of Indonesian Stock Market Trend (PowerBI)
 
 This dashboard provides a comprehensive analysis of the Indonesian stock market trends, showcasing key metrics and data visualizations. Below is a detailed description of each section within the dashboard:
 
