@@ -1,61 +1,94 @@
-# Analysis of Indonesian Stock Market Trend (PowerBI)
+# Analysis of Indonesian Stock Market Trends
+### about dataset
+Dataset ini berisi informasi mengenai perusahaan yang terdaftar di pasar saham Indonesia. Kolom-kolom yang terdapat dalam dataset ini meliputi:
 
-This dashboard provides a comprehensive analysis of the Indonesian stock market trends, showcasing key metrics and data visualizations. Below is a detailed description of each section within the dashboard:
+- Code: Kode saham perusahaan.
+- Name: Nama perusahaan.
+- ListingDate: Tanggal pencatatan saham di bursa.
+- Shares: Jumlah saham yang beredar.
+- ListingBoard: Papan pencatatan.
+- Sector: Sektor industri perusahaan.
+- LastPrice: Harga saham terakhir.
+- MarketCap: Kapitalisasi pasar.
+- MinutesFirstAdded: Waktu pertama kali data ditambahkan (dalam menit).
+- MinutesLastUpdated: Waktu terakhir data diperbarui (dalam menit).
+- HourlyFirstAdded: Waktu pertama kali data ditambahkan (dalam jam).
+- HourlyLastUpdated: Waktu terakhir data diperbarui (dalam jam).
+- DailyFirstAdded: Waktu pertama kali data ditambahkan (dalam hari).
+- DailyLastUpdated: Waktu terakhir data diperbarui (dalam hari).
 
+### Data Cleaning
 
-# Overview Metrics
+Pembersihan data dilakukan menggunakan Excel dengan langkah-langkah berikut:
 
-Count of Sector: 11
+  - Mengecek dan memperbaiki ejaan yang benar:
+        Memastikan semua kode saham dan nama perusahaan dieja dengan benar.
+        Memastikan konsistensi dalam penulisan sektor dan papan pencatatan.
 
-Count of Companies: 829
+  - Mengatasi data yang kosong:
+        Mengisi nilai yang hilang dengan rata-rata atau nilai median yang relevan.
+        Menghapus entri yang tidak lengkap jika tidak memungkinkan untuk mengisi data yang hilang.
 
-Average of MarketCap: 10.08T (trillion)
+  - Mengatasi data yang duplikat:
+        Mengidentifikasi dan menghapus entri duplikat untuk memastikan keunikan setiap perusahaan dalam dataset.
 
+  - Validasi data:
+        Memastikan bahwa nilai dalam kolom seperti Shares, LastPrice, dan MarketCap adalah angka positif dan masuk akal.
+        Memeriksa tanggal pencatatan (ListingDate) untuk memastikan format yang benar dan konsistensi kronologis.
 
-# Date Range
+### Pertanyaan/Pemrmasalahan
 
-DateKey: The date range slider allows users to filter data from August 10, 1977, to January 6, 2023.
+Beberapa pertanyaan yang relevan yang dapat dijawab dengan melihat dashboard adalah:
 
-Average of Last Price and Average of MarketCap by Year
+  1. Berapa jumlah sektor dan perusahaan yang tercatat di pasar saham Indonesia?
+  2. Bagaimana tren harga saham rata-rata dan kapitalisasi pasar rata-rata dari tahun ke tahun?
+  3. Sektor mana yang memiliki kapitalisasi pasar rata-rata tertinggi?
+  4. Perusahaan mana yang memiliki kapitalisasi pasar rata-rata tertinggi?
+  5. Bagaimana distribusi kapitalisasi pasar berdasarkan sektor?
+  6. Apakah ada korelasi antara jumlah saham yang beredar dan kapitalisasi pasar?
+  7. Bagaimana performa sektor-sektor tertentu selama periode waktu tertentu?
+  8. Perusahaan mana yang menunjukkan lonjakan signifikan dalam harga saham dan kapitalisasi pasar?
+  9. Bagaimana fluktuasi harga saham dan kapitalisasi pasar dipengaruhi oleh peristiwa ekonomi besar?
 
-This line chart displays the trends in the average last price of stocks and the average market capitalization over the years. The blue line represents the average of the last price, while the orange line represents the average market cap. Key peaks and troughs highlight significant market events.
+### Insight
 
+  1. Jumlah Sektor dan Perusahaan
+        Terdapat 11 sektor dan 829 perusahaan yang tercatat di pasar saham Indonesia.
 
-# Average of MarketCap by Sector
+  2. Tren Harga Saham dan Kapitalisasi Pasar
+        Dari grafik "Average of LastPrice and Average of MarketCap by Year", terlihat bahwa ada beberapa lonjakan signifikan dalam harga saham rata-rata dan kapitalisasi pasar rata-rata pada tahun-tahun tertentu, seperti pada tahun 1980, 2000, dan 2010.
 
-This bar chart shows the average market capitalization across different sectors. The sectors are color-coded for easy identification, including Financials, Infrastructures, Technology, Healthcare, Consumer Non-Cyclicals, Energy, Basic Materials, Industrials, Properties & Real Estate, Consumer Cyclicals, and Transportation & Logistics. Financials hold the highest average market cap.
+  3. Kapitalisasi Pasar Berdasarkan Sektor
+        Sektor keuangan memiliki kapitalisasi pasar rata-rata tertinggi dibandingkan dengan sektor lainnya.
 
+  4. Perusahaan dengan Kapitalisasi Pasar Tertinggi
+        Bank Central Asia memiliki kapitalisasi pasar rata-rata tertinggi diikuti oleh Bank Rakyat Indonesia dan Bank Mandiri.
 
-# Top 10 Highest Average MarketCap Companies
+  5. Distribusi Kapitalisasi Pasar
+        Grafik "Average of MarketCap by Sector" menunjukkan bahwa sektor keuangan mendominasi kapitalisasi pasar, diikuti oleh sektor infrastruktur dan teknologi.
 
-A pie chart representing the top 10 companies with the highest average market capitalization. Each company is color-coded and labeled with its respective market cap and percentage share. The leading company is Bank Central Asia with a market cap of 1.01T (29.44%).
+  6. Korelasi Jumlah Saham dan Kapitalisasi Pasar
+        Terdapat korelasi positif antara jumlah saham yang beredar dan kapitalisasi pasar, menunjukkan bahwa perusahaan dengan lebih banyak saham cenderung memiliki kapitalisasi pasar yang lebih tinggi.
 
+  7. Performa Sektor Selama Periode Waktu Tertentu
+        Sektor keuangan dan teknologi menunjukkan performa yang kuat selama beberapa dekade terakhir, sementara sektor lain seperti energi dan bahan dasar mengalami fluktuasi yang lebih besar.
 
-# Sectors Included
+  8. Lonjakan Signifikan dalam Harga Saham dan Kapitalisasi Pasar
+        Beberapa perusahaan, seperti Bank Central Asia, menunjukkan lonjakan signifikan dalam harga saham dan kapitalisasi pasar pada periode tertentu, kemungkinan besar terkait dengan peristiwa ekonomi besar atau perubahan kebijakan pemerintah.
 
-The list of sectors includes:
+  9. Fluktuasi Harga Saham dan Kapitalisasi Pasar dipengaruhi oleh Peristiwa Ekonomi Besar
+        Grafik "Average of LastPrice and Average of MarketCap by Year" menunjukkan bahwa fluktuasi signifikan dalam harga saham dan kapitalisasi pasar sering kali bertepatan dengan peristiwa ekonomi besar seperti krisis ekonomi, perubahan kebijakan pemerintah, dan peristiwa global yang berdampak pada pasar saham secara keseluruhan. Contoh yang menonjol termasuk lonjakan pada tahun 1997-1998 selama krisis keuangan Asia dan peningkatan pada tahun 2008-2009 selama krisis keuangan global.
 
-Basic Materials
+### Kesimpulan
 
-Consumer Cyclicals
+Analisis ini memberikan gambaran yang jelas mengenai tren pasar saham Indonesia. Beberapa poin penting yang dapat disimpulkan adalah:
 
-Consumer Non-Cyclicals
+  1. Pasar saham Indonesia didominasi oleh sektor keuangan dalam hal kapitalisasi pasar.
+  2. Terdapat fluktuasi yang signifikan dalam harga saham rata-rata dan kapitalisasi pasar rata-rata selama beberapa dekade terakhir.
+  3. Perusahaan besar seperti Bank Central Asia dan Bank Rakyat Indonesia memainkan peran utama dalam kapitalisasi pasar.
+  4. Sektor keuangan dan teknologi menunjukkan performa yang kuat, sementara sektor lain mengalami fluktuasi yang lebih besar.
+  5. Korelasi positif antara jumlah saham yang beredar dan kapitalisasi pasar menunjukkan pentingnya skala perusahaan dalam pasar saham.
+  7. Lonjakan signifikan dalam harga saham dan kapitalisasi pasar seringkali terkait dengan peristiwa ekonomi besar atau perubahan kebijakan.
+  8. Distribusi kapitalisasi pasar menunjukkan bahwa beberapa sektor dan perusahaan mendominasi pasar, sementara yang lain memiliki kontribusi yang lebih kecil.
 
-Energy
-
-Financials
-
-Healthcare
-
-Industrials
-
-Properties & Real Estate
-
-Technology
-
-Transportation & Logistics
-
-Infrastructures
-
-
-This dashboard provides valuable insights into the performance and trends of the Indonesian stock market, aiding investors, analysts, and stakeholders in making informed decisions.
+Laporan ini memberikan wawasan tentang struktur dan dinamika pasar saham Indonesia, serta mengidentifikasi sektor dan perusahaan kunci yang mendominasi pasar.
