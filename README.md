@@ -1,4 +1,4 @@
-# Analysis of Indonesian Stock Market Trends
+# Analysis of Indonesian Stock Market Trends (PowerBI)
 ### about dataset
 Dataset ini berisi informasi mengenai perusahaan yang terdaftar di pasar saham Indonesia. Kolom-kolom yang terdapat dalam dataset ini meliputi:
 
